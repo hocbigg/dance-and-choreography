@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Projects</title>
+  <meta name="description" content="Projects curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/dance-and-choreography/projects.html">
+  <meta property="og:title" content="Projects">
+  <meta property="og:description" content="Projects curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/dance-and-choreography/projects.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/dance-and-choreography/">Dance And Choreography</a></li>
+      <li><a href="/dance-and-choreography/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/dance-and-choreography/projects.html">Projects</a></li>
+      <li><a href="https://github.com/hocbigg/dance-and-choreography" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="projects">Projects</h1>
+<ul>
+<li><a href="#choreograph-your-own-solo-dance-piece">Solo Dance Piece</a></li>
+<li><a href="#transcribe-your-own-movement-score">Movement Score</a></li>
+<li><a href="#produce-your-own-dance-film">Dance Film</a></li>
+<li><a href="#plan-your-own-rehearsal-schedule">Rehearsal Schedule</a></li>
+<li><a href="#write-your-own-dance-review">Dance Review</a></li>
+<li><a href="#design-your-own-dance-lesson-plan">Dance Lesson Plan</a></li>
+<li><a href="#draft-your-own-artist-grant-proposal">Artist Grant Proposal</a></li>
+<li><a href="#develop-your-own-dance-studio-business-plan">Dance Studio Business Plan</a></li>
+<li><a href="#build-your-own-dance-preservation-archive">Dance Preservation Archive</a></li>
+</ul>
+<h2 id="choreograph-your-own-solo-dance-piece">Choreograph your own solo dance piece</h2>
+<ul>
+<li><a href="https://www.dance-masterclass.com/blog/10-simple-steps-for-starting-choreography" target="_blank" rel="noopener noreferrer">10 Simple Steps for Starting Choreography (Dance Masterclass)</a> - A step-by-step creative walkthrough for generating movement motifs, setting choreographic constraints, and structuring a solo dance piece.</li>
+</ul>
+<h2 id="transcribe-your-own-movement-score">Transcribe your own movement score</h2>
+<ul>
+<li><a href="https://www.dancenotation.org/labanotation-fundamentals" target="_blank" rel="noopener noreferrer">Labanotation Fundamentals (Dance Notation Bureau)</a> - An interactive methodology guide teaching how to transcribe human movement into written scores using the vertical Labanotation staff.</li>
+</ul>
+<h2 id="produce-your-own-dance-film">Produce your own dance film</h2>
+<ul>
+<li><a href="https://books.google.com/books?isbn=9781138699137" target="_blank" rel="noopener noreferrer">Making Video Dance: A Step-by-Step Guide to Creating Dance for the Screen (Katrina McPherson/Routledge)</a> - [Paid Book] The standard production manual covering storyboard drafting, camera-dancer framing, site shooting, and editing rhythms for screen-based choreography.</li>
+</ul>
+<h2 id="plan-your-own-rehearsal-schedule">Plan your own rehearsal schedule</h2>
+<ul>
+<li><a href="https://coryo.app/blog/how-to-schedule-dance-rehearsals" target="_blank" rel="noopener noreferrer">How to Schedule Dance Rehearsals That Your Team Actually Shows Up To (Coryo)</a> - A structured production workflow for collecting performer availability, establishing rehearsal milestones, and backward-planning toward a live performance date.</li>
+<li><a href="https://gostudiopro.com/blog/preparing-your-dancers-for-a-performance-5-strategies/" target="_blank" rel="noopener noreferrer">Preparing Your Dancers for a Performance: 5 Strategies (Studio Pro)</a> - A practical preparation guide covering run-through scheduling, physical recovery, and pre-performance operational checklists.</li>
+</ul>
+<h2 id="write-your-own-dance-review">Write your own dance review</h2>
+<ul>
+<li><a href="https://us.humankinetics.com/blogs/excerpt/guidelines-for-writing-a-dance-review" target="_blank" rel="noopener noreferrer">Guidelines for Writing a Dance Review (Dawn Loring and Julie Pentz/Human Kinetics)</a> - A four-part analytical methodology dividing a dance review into objective description, movement analysis, contextual interpretation, and critical evaluation.</li>
+<li><a href="https://sanjoyroy.net/2015/12/stage-to-page-a-guide-to-dance-reviewing-and-writing/" target="_blank" rel="noopener noreferrer">Stage to Page: A Guide to Dance Reviewing and Writing (Sanjoy Roy)</a> - A working dance critic's practical guide to active viewing, sensory note-taking, and drafting evocative movement prose.</li>
+</ul>
+<h2 id="design-your-own-dance-lesson-plan">Design your own dance lesson plan</h2>
+<ul>
+<li><a href="https://destinyarts.org/street-dance-curriculum/" target="_blank" rel="noopener noreferrer">Street Dance Curriculum Guide (Mika Lemoine and Rashidi Omari/Destiny Arts Center)</a> - An open pedagogical guide providing lesson-scaffolding templates, youth development practices, and structured drills for technique, composition, and freestyle.</li>
+<li><a href="https://books.google.com/books?isbn=9781492500506" target="_blank" rel="noopener noreferrer">Creative Dance for All Ages (Anne Green Gilbert/Human Kinetics)</a> - [Paid Book] The foundational dance pedagogy text detailing the five-part lesson planning framework: warm-up, concept exploration, skill development, creative study, and reflection.</li>
+</ul>
+<h2 id="draft-your-own-artist-grant-proposal">Draft your own artist grant proposal</h2>
+<ul>
+<li><a href="https://www.nyfa.org/blog/grant-writing-basics-how-to-put-your-best-foot-forward-with-funders/" target="_blank" rel="noopener noreferrer">Grant Writing Basics: How To Put Your Best Foot Forward with Funders (Tracie Holder/New York Foundation for the Arts)</a> - A practical guide to defining choreographic vision, establishing project urgency, meeting funding guidelines, and writing competitive project narratives.</li>
+<li><a href="https://fpcc.ca/wp-content/uploads/2020/07/grant-writing-handbook.pdf" target="_blank" rel="noopener noreferrer">Artist Grant Proposal Writing Handbook (First Peoples' Cultural Council)</a> - A step-by-step handbook covering core grant components, including artist statements, work sample curation, and balanced project budgets.</li>
+</ul>
+<h2 id="develop-your-own-dance-studio-business-plan">Develop your own dance studio business plan</h2>
+<ul>
+<li><a href="https://gostudiopro.com/blog/dance-studio-business-plan" target="_blank" rel="noopener noreferrer">Dance Studio Business Plan: 7 Steps to Get Started (Studio Pro)</a> - A comprehensive operational guide providing a step-by-step roadmap for market research, service pricing, facility budgeting, and studio financial planning.</li>
+</ul>
+<h2 id="build-your-own-dance-preservation-archive">Build your own dance preservation archive</h2>
+<ul>
+<li><a href="https://danceusa.s3.us-east-2.amazonaws.com/page_uploads/DocumentingDance.pdf" target="_blank" rel="noopener noreferrer">Documenting Dance: A Guide for Dance Preservation (Libby Smigel/Dance Heritage Coalition)</a> - A 65-page preservation handbook establishing standards for archiving rehearsal processes, choreographic notes, multi-camera recordings, and post-performance reception materials.</li>
+</ul>
+    </article>
+  </main>
+
+</body>
+</html>

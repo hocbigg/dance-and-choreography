@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Advanced Topics: Dance and Choreography</title>
+  <meta name="description" content="Advanced Topics: Dance and Choreography curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/dance-and-choreography/advanced_topics.html">
+  <meta property="og:title" content="Advanced Topics: Dance and Choreography">
+  <meta property="og:description" content="Advanced Topics: Dance and Choreography curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/dance-and-choreography/advanced_topics.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/dance-and-choreography/">Dance And Choreography</a></li>
+      <li><a href="/dance-and-choreography/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/dance-and-choreography/projects.html">Projects</a></li>
+      <li><a href="https://github.com/hocbigg/dance-and-choreography" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="advanced-topics-dance-and-choreography">Advanced Topics: Dance and Choreography</h1>
+<p>This document outlines advanced specialization tracks for self-directed learners who have completed foundational training in dance technique, anatomy, dance history, music fundamentals, and choreographic composition. Learners are encouraged to select one or two tracks tailored to their artistic goals and research interests rather than completing all tracks sequentially.</p>
+<ul>
+<li><strong>Dance Science and Somatics</strong> - Evidence-based conditioning, neuromuscular re-education, and movement analysis systems designed to enhance longevity, technical efficiency, and physical expressiveness.</li>
+<li><strong>Contemporary and Postmodern Choreography</strong> - Radical compositional strategies, pedestrian movement vocabularies, chance operations, and site-responsive methods developed from the mid-20th-century avant-garde to contemporary practice.</li>
+<li><strong>World and Vernacular Dance Traditions</strong> - Rigorous study of culturally rooted movement systems, polyrhythmic coordination, and improvisational structures beyond Western concert lineages.</li>
+<li><strong>Dance for Camera and Technology</strong> - Screen-based choreography, camera-dancer dynamics, digital visualization platforms, and formal movement score notation.</li>
+</ul>
+<h2 id="dance-science-and-somatics">Dance Science and Somatics</h2>
+<p>This track examines the biomechanical, neuromuscular, and somatic methodologies that sustain the moving body and refine movement awareness beyond traditional studio technique.</p>
+<p>Conditioning and Injury Science: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9940991/" target="_blank" rel="noopener noreferrer">The Efficacy of Physical Fitness Training on Dance Injury: A Systematic Review (Y. Dang et al./PubMed Central)</a> - An open-access systematic review evaluating empirical research on supplemental strength, aerobic, and neuromuscular conditioning for reducing injury rates and improving performance in dancers.</p>
+<p>Somatic Neuromuscular Re-Education: <a href="https://feldenkraisproject.com/collections/" target="_blank" rel="noopener noreferrer">Feldenkrais Project Lesson Collections (Nick Strauss-Klein/The Feldenkrais Project)</a> - A comprehensive library of structured audio Awareness Through Movement (ATM) lessons providing direct somatic exploration of skeletal alignment, pelvic organization, and minimal-effort mechanics.</p>
+<p>Developmental Movement Integration: <a href="https://archive.org/details/makingconnection0000hack" target="_blank" rel="noopener noreferrer">Making Connections: Total Body Integration Through Bartenieff Fundamentals (Peggy Hackney/Routledge)</a> - The definitive manual on Irmgard Bartenieff's movement concepts, detailing the six fundamental developmental movement patterns, core-distal connectivity, and full-body neuromuscular repatterning.</p>
+<p>Laban Movement Analysis: <a href="https://books.google.com/books?isbn=9781492562559" target="_blank" rel="noopener noreferrer">Laban/Bartenieff Movement Studies: Contemporary Applications (Colleen Wahl/Human Kinetics)</a> - A comprehensive guide to observing, describing, and analyzing human movement using the Laban framework of Body, Effort, Shape, and Space (BESS) for choreography, performance coaching, and technical refinement.</p>
+<h2 id="contemporary-and-postmodern-choreography">Contemporary and Postmodern Choreography</h2>
+<p>This track investigates experimental choreographic methods that dismantle traditional theatrical hierarchies through contact, pedestrian action, chance systems, and non-proscenium spaces.</p>
+<p>Contact Improvisation: <a href="https://www.youtube.com/watch?v=_82Od5NM4LI" target="_blank" rel="noopener noreferrer">Steve Paxton Talking Dance (Walker Art Center/YouTube)</a> - A recorded lecture-demonstration and dialogue with the originator of Contact Improvisation, examining the physics of weight-sharing, skeletal momentum, and sensory awareness that underpin the form.</p>
+<p>Postmodern Conceptual Lineages: <a href="https://www.moma.org/calendar/exhibitions/3927" target="_blank" rel="noopener noreferrer">Judson Dance Theater: The Work Is Never Done (Museum of Modern Art)</a> - An extensive exhibition portal documenting the 1960s collective that transformed modern dance through scores, ordinary task-based movement, and cross-disciplinary collaborations.</p>
+<p>Chance Operations and Indeterminacy: <a href="https://www.youtube.com/watch?v=zhK3Ep4HiI0" target="_blank" rel="noopener noreferrer">Merce Cunningham's Working Process (Walker Art Center/YouTube)</a> - An archival documentary examining Cunningham's systematic use of chance procedures, such as coin tosses and charts, to sever choreographic structure from musical phrasing and subjective habits.</p>
+<p>Algorithmic and Geometric Improvisation: <a href="https://improvisation-technologies.zkm.de/" target="_blank" rel="noopener noreferrer">William Forsythe: Improvisation Technologies — The Lectures (William Forsythe and ZKM Karlsruhe)</a> - A free video lecture archive demonstrating Forsythe's geometric and spatial improvisation strategies, showing dancers how to generate complex contemporary movement by treating the body as an inscriptive drawing instrument.</p>
+<p>Site-Specific Performance: <a href="https://books.google.com/books?isbn=9780197515242" target="_blank" rel="noopener noreferrer">On Site: Methods for Site-Specific Performance Creation (Stephan Koplowitz/Oxford University Press)</a> - A practical handbook covering spatial analysis, community engagement, architectural research, civic permitting, and choreographic staging outside traditional theater auditoriums.</p>
+<h2 id="world-and-vernacular-dance-traditions">World and Vernacular Dance Traditions</h2>
+<p>This track explores distinct cultural movement lineages, focusing on the inseparability of dance technique, communal context, and complex rhythmic structures.</p>
+<p>West African Polyrhythmic Movement: <a href="https://www.youtube.com/watch?v=AeJlb-n89LA" target="_blank" rel="noopener noreferrer">Online West African Dance Class with Maguette Camara (Ailey Extension/YouTube)</a> - A studio masterclass led by a Senegalese master dancer breaking down the physical isolations, low center of gravity, and footwork patterns coordinated with live djembe drum rhythms.</p>
+<p>Hip-Hop Foundations and Freestyle: <a href="https://www.youtube.com/watch?v=GcZJMiHds3U" target="_blank" rel="noopener noreferrer">How I Practice Hip Hop Dance with Four Foundations (Jeffery Hu/YouTube)</a> - An applied tutorial exploring the foundational mechanics of hip-hop dance—bounce, rock, roll, and wave—and demonstrating how to transition drills into spontaneous freestyle improvisation.</p>
+<p>Afro-Diasporic Modernism: <a href="https://www.loc.gov/collections/katherine-dunham/about-this-collection/" target="_blank" rel="noopener noreferrer">Selections from the Katherine Dunham Collection (Library of Congress)</a> - Archival video and pedagogical materials detailing Dunham Technique, illustrating how anthropological research in the Caribbean informed a codified system of pelvic isolations, polyrhythmic progression, and modern dance staging.</p>
+<p>Indian Classical Aesthetics and Rhythmic Theory: <a href="https://books.google.com/books?isbn=9788123028934" target="_blank" rel="noopener noreferrer">Indian Classical Dance (Kapila Vatsyayan/Publications Division)</a> - A seminal comparative study analyzing the sculptural poses, hand mudras, expressive abhinaya, and complex metric cycles (tala) that govern traditions such as Bharatanatyam, Kathak, and Odissi.</p>
+<h2 id="dance-for-camera-and-technology">Dance for Camera and Technology</h2>
+<p>This track examines how choreographic practice evolves through digital mediation, from cinematographic framing and camera movement to interactive computational scores and notation.</p>
+<p>Screendance Theory and Aesthetics: <a href="https://books.google.com/books?isbn=9780199772629" target="_blank" rel="noopener noreferrer">Screendance: Inscribing the Ephemeral Image (Douglas Rosenberg/Oxford University Press)</a> - A foundational critical text framing screendance as an independent hybrid discipline, examining camera-subject dynamics, montage rhythm, and the translation of three-dimensional movement to two-dimensional screens.</p>
+<p>Screendance Directing and Production: <a href="https://books.google.com/books?isbn=9781138699137" target="_blank" rel="noopener noreferrer">Making Video Dance: A Step-by-Step Guide to Creating Dance for the Screen (Katrina McPherson/Routledge)</a> - A practical production handbook detailing the entire video-dance process, from pre-production storyboarding and camera framing to shooting logistics and choreographic film editing.</p>
+<p>Digital Choreographic Visualization: <a href="https://synchronousobjects.osu.edu/" target="_blank" rel="noopener noreferrer">Synchronous Objects for One Flat Thing, reproduced (William Forsythe, Norah Zuniga Shaw, and Maria Palazzi/The Ohio State University)</a> - An open-access interactive project providing animated, statistical, and spatial visualizations of ensemble counterpoint and cueing structures in contemporary choreography.</p>
+<p>Movement Score Literacy: <a href="https://www.dancenotation.org/labanotation-fundamentals" target="_blank" rel="noopener noreferrer">Labanotation Fundamentals (Dance Notation Bureau)</a> - An interactive educational portal that teaches the principles of reading and writing human movement using the four-line vertical staff, directional symbols, joint rotations, and temporal spacing.</p>
+    </article>
+  </main>
+
+</body>
+</html>
